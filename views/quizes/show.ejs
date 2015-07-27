@@ -1,5 +1,6 @@
+<% var tema = quiz.tema; %>
 <form method="get" action="/quizes/<%= quiz.id %>/answer">
-    <p><%= quiz.pregunta %></p>
+    <p>[Tema: <%= tema.charAt(0).toUpperCase() + tema.slice(1) %>] <%= quiz.pregunta %></p>
     <input type="text" name="respuesta" value="Respuesta"/>
     <input type="submit" value="Enviar">
 </form>
